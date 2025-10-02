@@ -242,7 +242,7 @@ int AsciiParser::parsingMsg(std::vector<unsigned char> raw_msg, std::shared_ptr<
                     parsed_data->scan_data_config.scan_interval = strtoul(field[6], NULL, 16);
                     parsed_data->scan_data_config.fieldset_output_activate = strtoul(field[7], NULL, 16);
 
-                    for(int i = 0; i < field.size(); i++)
+                    for(std::size_t i = 0; i < field.size(); i++)
                     {
                         std::cout << field[i] << " ";
                     }
